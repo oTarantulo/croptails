@@ -16,6 +16,7 @@ radius = 4.0
 size = Vector2(6, 11)
 
 [node name="SmallTree" type="Sprite2D"]
+position = Vector2(0, -11)
 texture = SubResource("AtlasTexture_xyb6m")
 script = ExtResource("2_au4vd")
 
