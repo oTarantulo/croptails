@@ -24,19 +24,21 @@ radius = 6.0
 
 [node name="Rock" type="Sprite2D"]
 material = SubResource("ShaderMaterial_bntui")
-position = Vector2(0, -4)
 texture = SubResource("AtlasTexture_aw33s")
+offset = Vector2(0, -2)
 script = ExtResource("3_bntui")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_msy0l")
 
 [node name="HurtComponent" parent="." instance=ExtResource("2_msy0l")]
 tool = 1
 
 [node name="HurtComponentCollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_bntui")
 debug_color = Color(0.8201856, 0.2947285, 0.6984088, 0.41960785)
 

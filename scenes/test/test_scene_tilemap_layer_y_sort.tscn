@@ -23,7 +23,12 @@ tile_set = ExtResource("1_ctmx0")
 
 [node name="Overgrowth" type="TileMapLayer" parent="GameTileMap"]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAALAA4AAwAIAAIAAAAMAAsAAwADAAAAAAAJAAkAAwADAAAAAAAQAAsAAwAIAAEAAAAPAAwAAwAHAAEAAAAOABAAAwAGAAAAAAANABAAAwAFAAAAAAAOAAkAAwAFAAIAAAALABAAAwAEAAIAAAAKABEAAwADAAIAAAAVAA4AAwAFAAMAAAA=")
+tile_map_data = PackedByteArray("AAALAA4AAwAIAAIAAAAMAAsAAwADAAAAAAAJAAkAAwADAAAAAAAQAAsAAwAIAAEAAAAPAAwAAwAHAAEAAAAOABAAAwAGAAAAAAANABAAAwAFAAAAAAAOAAkAAwAFAAIAAAALABAAAwAEAAIAAAAKABEAAwADAAIAAAAVAA4AAwAFAAMAAAAVAAwAAwAAAAMAAAAWAA0AAwABAAMAAAA=")
+tile_set = ExtResource("1_ctmx0")
+
+[node name="Objects" type="TileMapLayer" parent="GameTileMap"]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAYAAsABAAAAAAABAAbAAwABAAAAAAABgAdAAsABAAAAAAABgAeAA0ABAAAAAAABQAcAAkABAAAAAAABAA=")
 tile_set = ExtResource("1_ctmx0")
 
 [node name="Player" parent="." instance=ExtResource("2_ph1je")]
