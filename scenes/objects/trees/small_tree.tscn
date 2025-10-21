@@ -44,6 +44,3 @@ debug_color = Color(0.8814629, 0.20382515, 0.66929245, 0.41960785)
 
 [node name="DamageComponent" parent="." instance=ExtResource("4_g5iuu")]
 max_damage = 3
-
-[node name="ShakeTimer" type="Timer" parent="."]
-one_shot = true

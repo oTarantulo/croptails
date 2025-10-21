@@ -1,15 +1,19 @@
 extends Sprite2D
 
+@export var shake_timer_wait_time: float = 1.0
+
 @onready var hurt_component: HurtComponent = $HurtComponent
 @onready var damage_component: DamageComponent = $DamageComponent
-@onready var shake_timer: Timer = $ShakeTimer
+@onready var shake_timer: Timer = Timer.new()
 
 var log_scene = preload("res://scenes/objects/trees/log.tscn")
 
 func _ready() -> void:
 	hurt_component.hurt.connect(on_hurt)
 	damage_component.max_damage_reached.connect(on_max_damage_reached)
+	shake_timer.wait_time = shake_timer_wait_time
 	shake_timer.timeout.connect(_on_timer_timeout)
+	add_child(shake_timer)
 
 func on_hurt(hit_damage: int) -> void:
 	shake_timer.stop()
