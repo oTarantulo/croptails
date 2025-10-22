@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dp0ljtdgrqr8k" path="res://assets/game/characters/free_chicken_sprites.png" id="1_awcwn"]
 [ext_resource type="Script" uid="uid://dq11ph2b6y4ds" path="res://scenes/characters/chicken/chicken.gd" id="1_r6a33"]
 [ext_resource type="Script" uid="uid://badwh0q0kl515" path="res://scripts/state_machine/node_state_machine.gd" id="2_31inw"]
-[ext_resource type="Script" uid="uid://72j88rcnn6bu" path="res://scenes/characters/chicken/idle_state.gd" id="3_r6a33"]
-[ext_resource type="Script" uid="uid://nbqdpk58psic" path="res://scenes/characters/chicken/walk_state.gd" id="4_31inw"]
+[ext_resource type="Script" uid="uid://72j88rcnn6bu" path="res://scenes/characters/npc_states/idle_state.gd" id="3_r6a33"]
+[ext_resource type="Script" uid="uid://nbqdpk58psic" path="res://scenes/characters/npc_states/walk_state.gd" id="4_31inw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_asyyu"]
 atlas = ExtResource("1_awcwn")
@@ -70,10 +70,8 @@ script = ExtResource("1_r6a33")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_a43k8")
-animation = &"walk"
+animation = &"idle"
 autoplay = "idle"
-frame = 3
-frame_progress = 0.72965395
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4)
@@ -91,6 +89,7 @@ initial_node_state = NodePath("Idle")
 script = ExtResource("3_r6a33")
 character = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+idle_timer_wait_time = 2.0
 
 [node name="Walk" type="Node2D" parent="StateMachine" node_paths=PackedStringArray("character", "animated_sprite_2d", "navigation_agent_2d")]
 script = ExtResource("4_31inw")

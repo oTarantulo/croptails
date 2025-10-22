@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@export var shake_timer_wait_time: int = 1.0
+@export var shake_timer_wait_time: float = 1.0
 
 @onready var hurt_component: HurtComponent = $HurtComponent
 @onready var damage_component: DamageComponent = $DamageComponent
