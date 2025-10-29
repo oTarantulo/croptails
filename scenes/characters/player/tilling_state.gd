@@ -3,11 +3,14 @@ extends NodeState
 @export var player: Player
 @export var animated_sprite_2d: AnimatedSprite2D
 
+signal finished_tilling
+
 func _on_process(_delta : float) -> void:
 	pass
 
 func _on_physics_process(_delta : float) -> void:
-	pass
+	if animated_sprite_2d.frame == 1:
+		finished_tilling.emit()
 
 func _on_next_transitions() -> void:
 	if !animated_sprite_2d.is_playing():

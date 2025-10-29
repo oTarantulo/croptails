@@ -27,10 +27,10 @@ func _on_enter() -> void:
 		hit_component_collision_shape.position = Vector2(0, 3)
 		animated_sprite_2d.play("water_front")
 	elif player.player_direction == Vector2.LEFT:
-		hit_component_collision_shape.position = Vector2(-9, 0)
+		hit_component_collision_shape.position = Vector2(-20, 0)
 		animated_sprite_2d.play("water_left")
 	elif player.player_direction == Vector2.RIGHT:
-		hit_component_collision_shape.position = Vector2(9, 0)
+		hit_component_collision_shape.position = Vector2(20, 0)
 		animated_sprite_2d.play("water_right")
 	else:
 		animated_sprite_2d.play("water_front")
